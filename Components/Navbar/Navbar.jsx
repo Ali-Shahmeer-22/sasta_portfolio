@@ -1,7 +1,7 @@
 import { useRef, useState } from 'react';
 import './Navbar.css';
 import logo from './logo.png';
-import AnchorLink from 'react-anchor-link-smooth-scroll'; // Ensure correct import
+import AnchorLink from 'react-anchor-link-smooth-scroll'; 
 import { IoMdMenu } from "react-icons/io";
 // import { IoCloseSharp } from "react-icons/io5";
 import { IoIosCloseCircleOutline } from "react-icons/io";
@@ -16,7 +16,7 @@ const Navbar = () => {
   const closeMenu=()=>{
     menuRef.current.style.right="-350px";
   }
-  
+
   return (
     <div className="navbar">
       <img className="image" src={logo} alt="Logo" />
