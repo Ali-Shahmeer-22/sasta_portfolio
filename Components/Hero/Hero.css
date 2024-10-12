@@ -1,0 +1,139 @@
+/* Hero Section */
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center items horizontally */
+    justify-content: center; /* Center items vertically */
+    text-align: center; /* Center text */
+    padding: 50px 20px; /* Adjusted padding */
+    color: #fff;
+    height: 100vh; /* Ensure it takes full viewport height */
+}
+
+/* Profile Image */
+.hero img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;  /* Circular image */
+    object-fit: cover;
+    margin-top: 20px; /* Adjusted for better spacing */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+}
+
+/* Hero Heading */
+.hero h1 {
+    font-size: 38px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/* Gradient Text in Hero Heading */
+.hero h1 span {
+    background: linear-gradient(270deg, #DA7C25 10%, #B923E1 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Hero Description */
+.hero p {
+    font-size: 18px;
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+
+/* Action Buttons Container */
+.hero-action {
+    display: flex;
+    gap: 15px;
+    flex-direction: column; /* Stack buttons vertically */
+    align-items: center; /* Center buttons */
+}
+
+/* Button Styling */
+.hero-connect, .hero-resume {
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+/* Connect Button */
+.hero-connect {
+    background: linear-gradient(267deg, #DA7C25 0.36%, #B923E1 102.06%);
+    color: white;
+}
+
+.hero-connect:hover {
+    transform: scale(1.05);
+}
+
+/* Resume Button */
+.hero-resume {
+    background: #fff;
+    color: #000;
+}
+
+.hero-resume:hover {
+    background: #ddd;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    .hero {
+        padding: 30px 15px;
+    }
+
+    .hero img {
+        width: 100px;
+        height: 100px;
+        margin-top: 20px; /* Adjusted margin for smaller screens */
+        margin-bottom: 30px;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+        margin-top: 15px;
+        line-height: 40px;
+        width: 90%; /* Added width to manage overflow */
+    }
+
+    .hero p {
+        width: 90%; /* Added width for proper centering */
+        font-size: 16px;
+        line-height: 24px;
+        margin: 10px auto; /* Centering */
+    }
+
+    .hero-action {
+        flex-direction: column; /* Stack buttons vertically */
+        gap: 10px;
+        width: 100%; /* Ensure buttons are centered */
+        margin-bottom: 20px;
+    }
+
+    .hero-connect, .hero-resume {
+        padding: 12px 20px;
+        border-radius: 30px;
+        width: 90%; /* Make buttons full width with padding */
+    }
+}
+
+@media (max-width: 430px) {
+    .hero h1 {
+        font-size: 26px;
+        line-height: 32px;
+    }
+
+    .hero p {
+        font-size: 14px;
+        line-height: 22px;
+    }
+
+    .hero-connect, .hero-resume {
+        padding: 10px 15px;
+    }
+}

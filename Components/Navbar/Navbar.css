@@ -1,0 +1,144 @@
+/* Navbar Container */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 150px;
+}
+
+/* Adjusted Logo Size */
+.navbar .image {
+    width: 90px;  /* Smaller size */
+    height: 90px; /* Matching aspect ratio */
+    object-fit: contain; /* Ensures the image scales properly */
+}
+
+/* Navigation Menu */
+.nav-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    gap: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    color: #fff;
+}
+
+.nav-menu li {
+    cursor: pointer;
+    position: relative;
+    transition: color 0.3s;
+}
+
+.nav-menu li:hover {
+    color: #B923E1;
+}
+
+.nav-menu li::after {
+    content: '';
+    width: 0%;
+    height: 2px; 
+    background-color: #B923E1;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    transition: width 0.4s;
+}
+
+.nav-menu li:hover::after {
+    width: 100%;
+}
+
+/* Connect Button */
+.nav-connect {
+    padding: 15px 35px;
+    border-radius: 50px;
+    background: linear-gradient(267deg, #DA7C25 0.36%, #B923E1 102.06%);
+    font-size: 20px;
+    font-weight: 600;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.nav-connect:hover {
+    background: linear-gradient(267deg, #B923E1 0.36%, #DA7C25 102.06%);
+    transform: scale(1.05);
+}
+
+.anchor-link {
+    text-decoration: none;
+    color: #fff;
+}
+
+.nav-mob-close {
+    display: none;
+}
+
+.nav-mob-open {
+    display: none;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 10px 20px; /* Adjusted padding for smaller screens */
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center items horizontally */
+    }
+
+    .nav-connect {
+        display: none; /* Hide the connect button */
+    }
+
+    .nav-mob-open {
+        display: block;
+        position: fixed;
+        right: 30px;
+        z-index: 3; /* Ensure it’s above other elements */
+    }
+
+    .nav-mob-close {
+        display: block;
+        position: absolute; /* Positioned relative to the parent */
+        top: 20px; /* Adjusted for better visibility */
+        right: 20px; /* Adjusted for better visibility */
+        width: 30px;
+        z-index: 3; /* Ensure it’s above other elements */
+    }
+
+    .nav-menu {
+        position: fixed;
+        flex-direction: column;
+        align-items: center;
+        top: 0;
+        gap: 30px;
+        background-color: #2e0639;
+        width: 100%; /* Full width for mobile */
+        height: 100%;
+        z-index: 2;
+        transition: 0.6s;
+        right: -100%; /* Initially hide off-screen */
+    }
+
+    /* Show menu when active (you may need to control this with JS) */
+    .nav-menu.active {
+        right: 0; /* Slide in when active */
+    }
+
+    .nav-menu li {
+        font-size: 30px;
+        padding: 20px; /* Reduced padding for mobile */
+        flex-direction: row;
+        gap: 20px;
+        text-align: center; /* Center text in list items */
+    }
+
+    /* Adjust the logo size for mobile */
+    .navbar .image {
+        width: 70px; /* Smaller logo for mobile */
+        height: 70px;
+    }
+}

@@ -1,0 +1,108 @@
+/* My Work Section */
+.mywork {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+    margin: 80px 170px;
+}
+
+/* My Work Title */
+.mywork-title {
+    position: relative;
+}
+
+.mywork-title h1 {
+    padding: 0 30px;
+    font-size: 80px;
+    font-weight: 600;
+}
+
+/* My Work Container */
+.mywork-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Three columns */
+    gap: 40px;
+}
+
+/* My Work Images */
+.mywork-container img {
+    box-sizing: border-box;
+    width: 100%; /* Make images responsive */
+    max-width: 419px; /* Maintain max width */
+    height: auto; /* Maintain aspect ratio */
+    transition: 0.4s;
+    cursor: pointer;
+    border-radius: 10px; /* Added for consistent border radius */
+}
+
+.mywork-container img:hover {
+    transform: scale(1.10);
+    border: 4px solid #ff00ff;
+}
+
+/* Show More Button */
+.mywork-showmore {
+    display: flex;
+    align-items: center; /* Center align items */
+    justify-content: center; /* Center align items */
+    border-radius: 50px;
+    gap: 15px;
+    border: 2px solid #fff;
+    padding: 30px 60px;
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 80px;
+    transition: 0.8s;
+    cursor: pointer;
+}
+
+.mywork-showmore:hover {
+    gap: 30px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .mywork {
+        margin: 50px 30px; /* Adjust margins */
+        gap: 60px; /* Reduce gap */
+    }
+
+    .mywork-title h1 {
+        font-size: 60px; /* Adjust font size for smaller screens */
+    }
+
+    .mywork-container {
+        grid-template-columns: repeat(2, 1fr); /* Two columns */
+    }
+
+    .mywork-container img {
+        max-width: 100%; /* Ensure full responsiveness */
+    }
+
+    .mywork-showmore {
+        font-size: 24px; /* Adjust button font size */
+        padding: 20px 40px; /* Adjust button padding */
+    }
+}
+
+@media (max-width: 480px) {
+    .mywork {
+        margin: 30px 10px; /* Further adjust margins */
+        gap: 40px; /* Further reduce gap */
+    }
+
+    .mywork-title h1 {
+        font-size: 40px; /* Further adjust font size */
+    }
+
+    .mywork-container {
+        grid-template-columns: 1fr; /* Single column */
+    }
+
+    .mywork-showmore {
+        font-size: 20px; /* Further adjust button font size */
+        padding: 15px 30px; /* Further adjust button padding */
+    }
+}

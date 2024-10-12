@@ -1,0 +1,152 @@
+/* Footer Section */
+.footer {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
+    margin: 50px 170px;
+}
+
+/* Top Part of the Footer */
+.footer-top {
+    display: flex;
+    flex-direction: column; /* Stack on smaller screens */
+    gap: 30px; /* Added gap for better spacing */
+    width: 100%; /* Make it responsive */
+}
+
+/* Left Side of Footer Top */
+.footer-top-left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align items to start */
+    padding-right: 20px; /* Adjust padding for smaller screens */
+}
+
+.footer-top-left img {
+    width: 150px; /* Logo or brand image */
+}
+
+.footer-top-left p {
+    font-size: 22px;
+    font-weight: 500;
+    max-width: 400px;
+}
+
+/* Right Side of Footer Top */
+.footer-top-right {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+}
+
+/* Email Input Container */
+.footer-email-input {
+    display: flex;
+    gap: 30px;
+    padding: 20px 30px;
+    border-radius: 40px;
+    background: #323232;
+}
+
+.footer-email-input input {
+    outline: none;
+    border: none;
+    background: transparent;
+    color: antiquewhite;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 18px;
+}
+
+/* Subscribe Button */
+.footer-subscribe {
+    font-size: 20px;
+    padding: 22px 50px;
+    border-radius: 50px;
+    background: linear-gradient(264deg, #dfdfdf -5.09%, #b41555 102.09%);
+    cursor: pointer;
+    transition: transform 0.4s;
+}
+
+/* Bottom Part of the Footer */
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+    width: 100%; /* Make it responsive */
+}
+
+.footer-bottom-right {
+    display: flex;
+    gap: 50px;
+}
+
+/* Hover Effects */
+.footer-email-input:hover {
+    border: 2px solid #fff; /* Change border color on hover */
+}
+
+.footer-subscribe:hover {
+    transform: scale(1.1);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .footer {
+        margin: 30px 20px; /* Adjust margins for smaller screens */
+    }
+
+    .footer-top {
+        flex-direction: column; /* Stack elements */
+        align-items: center; /* Center align */
+    }
+
+    .footer-top-left {
+        padding-right: 0; /* Remove padding */
+        text-align: center; /* Center align text */
+    }
+
+    .footer-top-right {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center align */
+        gap: 15px; /* Adjust gap */
+    }
+
+    .footer-email-input {
+        padding: 15px 20px; /* Adjust padding */
+        width: 100%; /* Make input take full width */
+    }
+
+    .footer-subscribe {
+        padding: 15px 30px; /* Adjust padding */
+        font-size: 18px; /* Reduce font size */
+    }
+
+    .footer-bottom {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center align */
+        font-size: 18px; /* Reduce font size */
+        gap: 10px; /* Add gap */
+    }
+
+    .footer-bottom-right {
+        justify-content: center; /* Center align items */
+        gap: 20px; /* Adjust gap */
+    }
+}
+
+@media (max-width: 480px) {
+    .footer {
+        margin: 20px 10px; /* Further adjust margins */
+    }
+
+    .footer-top-left p {
+        font-size: 18px; /* Reduce font size */
+        max-width: 300px; /* Reduce max width */
+    }
+
+    .footer-bottom {
+        font-size: 16px; /* Further reduce font size */
+    }
+}

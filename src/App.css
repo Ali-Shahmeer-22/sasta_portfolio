@@ -1,0 +1,110 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  background: black;
+  color: #fff;
+}
+
+/* Services Section */
+.services {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center items horizontally */
+  justify-content: center; /* Center items vertically */
+  gap: 80px;
+  margin: 80px auto; /* Center the section with auto margin */
+  max-width: 1200px; /* Set a max width for larger screens */
+  padding: 0 20px; /* Add padding for smaller screens */
+}
+
+.services-title {
+  position: relative;
+  text-align: center; /* Center text within title */
+}
+
+.services-title h1 {
+  padding: 0px 30px;
+  font-size: 80px;
+  font-weight: 600;
+}
+
+.services-title img {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+}
+
+.services-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+  gap: 20px; /* Reduced gap from 40px to 20px */
+  margin-bottom: 80px;
+  width: 100%; /* Ensure it takes the full width */
+}
+
+.services-format {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  padding: 40px; /* Adjusted padding */
+  border-radius: 10px;
+  border: 2px solid #fff;
+  transition: 0.4s;
+}
+
+.services-format h3 {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.services-format h2 {
+  font-size: 38px;
+  font-weight: 600;
+  background: linear-gradient(270deg, #DA7C25 10%, #B923E1 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.services-format p {
+  color: #DA7C25;
+  font-size: 22px;
+  line-height: 40px;
+  max-width: 300px;
+}
+
+.services-readmore {
+  display: flex;
+  margin-top: 20px;
+  gap: 20px;
+  align-items: center;
+}
+
+.services-format:hover {
+  border: 2px solid #ff00ff;
+  background-image: linear-gradient(45deg, #3f0028, #582300);
+  transform: scale(1.05);
+  transition: 1.4s;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+  .services {
+      margin: 20px auto; /* Adjust margins for smaller screens */
+      padding: 0 10px; /* Reduced padding for smaller screens */
+  }
+
+  .services-title h1 {
+      font-size: 60px; /* Adjust font size for smaller screens */
+  }
+
+  .services-format {
+      padding: 30px; /* Reduced padding for service format on smaller screens */
+  }
+}
